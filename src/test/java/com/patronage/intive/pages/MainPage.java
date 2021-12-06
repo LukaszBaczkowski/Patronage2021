@@ -29,8 +29,15 @@ public class MainPage extends BasePage {
     @FindBy(how = How.XPATH, using = "//h5[contains(text(),'Elements')]")
     WebElement elementsSection;
 
+
+
+
+
     @FindBy(how = How.CSS, using = "#item-2")
     WebElement radioButtonTab;
+    @FindBy(how = How.CSS, using = "#item-5")
+    WebElement linksButtonTab;
+
 
     public void openDemoQA() {
         driver.get(GOOGLE_URL);
@@ -46,9 +53,14 @@ public class MainPage extends BasePage {
         elementsSection.click();
     }
 
+
+
     public void selectRadioButtonMenuItem() {
         radioButtonTab.click();
     }
 
+    public void selectLinksMenuItem() {
 
+        linksButtonTab.click();
+    }
 }
