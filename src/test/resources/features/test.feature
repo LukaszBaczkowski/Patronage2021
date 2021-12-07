@@ -17,14 +17,8 @@ Feature: DemoQA Tests
     Then "Link has responded with staus 201 and status text Created" message should be visible
 
   Scenario: Open DemoQA widgets
-    Given DemoQA site is open
+    Given DemoQA site open
     When user select Widgets category
-    And  select Tool Tips tab
-    And  user hover over "Hover me to see button"
-    Then "Button Tool tip" should contain "You hovered over the Button"
-    When user hover over "Hover me to see field"
-    Then "Text Field Tool tip" should contain "You hovered over the text field"
-    When user hover over "Contrary"
-    Then "Contrary Tool tip" should contain "You hovered over the Contrary"
-    When user hover over "Section 1.10.32"
-    Then "Section Tool tip" should contain "You hovered over the 1.10.32"
+    And  select Tabs tab
+    And  user click "Origin tab"
+    Then "Contrary to popular belief, Lorem Ipsum is not simply random text." text should be visible

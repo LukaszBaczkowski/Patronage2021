@@ -11,9 +11,8 @@ public class LinksSubPage extends BasePage {
     @FindBy(how = How.XPATH, using = "//a[contains(text(),'Created')]")
     WebElement LinkCreated;
 
-    @FindBy(how = How.XPATH, using = "//p[@id='linkResponse']")
+    @FindBy(how = How.ID, using = "linkResponse")
     WebElement confirmCreatedLinkMessage;
-
 
     public void selectLinkCreated() {
 

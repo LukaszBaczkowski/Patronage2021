@@ -29,15 +29,16 @@ public class MainPage extends BasePage {
     @FindBy(how = How.XPATH, using = "//h5[contains(text(),'Elements')]")
     WebElement elementsSection;
 
-
-
+    @FindBy(how = How.XPATH, using = "//h5[contains(text(),'Widgets')]")
+    WebElement widgetsSection;
 
 
     @FindBy(how = How.CSS, using = "#item-2")
     WebElement radioButtonTab;
     @FindBy(how = How.CSS, using = "#item-5")
-    WebElement linksButtonTab;
-
+    WebElement linksTab;
+    @FindBy(how = How.CSS, using = "#item-5")
+    WebElement tabsTab;
 
     public void openDemoQA() {
         driver.get(GOOGLE_URL);
@@ -52,7 +53,11 @@ public class MainPage extends BasePage {
         ((JavascriptExecutor)driver).executeScript("scroll(0, 250);");
         elementsSection.click();
     }
+    public void selectWidgetsSection() {
 
+        ((JavascriptExecutor)driver).executeScript("scroll(0, 250);");
+        widgetsSection.click();
+    }
 
 
     public void selectRadioButtonMenuItem() {
@@ -61,6 +66,10 @@ public class MainPage extends BasePage {
 
     public void selectLinksMenuItem() {
 
-        linksButtonTab.click();
+        linksTab.click();
+    }
+    public void selectTabsMenuItem() {
+
+        tabsTab.click();
     }
 }
