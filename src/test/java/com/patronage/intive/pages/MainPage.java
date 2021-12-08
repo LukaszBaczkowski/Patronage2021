@@ -37,9 +37,10 @@ public class MainPage extends BasePage {
     WebElement radioButtonTab;
     @FindBy(how = How.CSS, using = "#item-5")
     WebElement linksTab;
-    @FindBy(how = How.CSS, using = "#item-5")
+//    @FindBy(how = How.CSS, using = "#item-5")
+//    WebElement tabsTab;
+    @FindBy(how = How.XPATH, using = "//span[contains(text(),'Tabs')]")
     WebElement tabsTab;
-
     public void openDemoQA() {
         driver.get(GOOGLE_URL);
     }
@@ -60,9 +61,9 @@ public class MainPage extends BasePage {
     }
 
 
-    public void selectRadioButtonMenuItem() {
-        radioButtonTab.click();
-    }
+//    public void selectRadioButtonMenuItem() {
+//        radioButtonTab.click();
+//    }
 
     public void selectLinksMenuItem() {
 

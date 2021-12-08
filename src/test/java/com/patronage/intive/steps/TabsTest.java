@@ -19,7 +19,7 @@ public class TabsTest {
 
 
     @Given("DemoQA site open")
-    public void demoqaSiteIsOpen() {
+    public void demoqaSiteOpen() {
         mainPage.openDemoQA();
         mainPage.waitUntilPageOpen();
     }
