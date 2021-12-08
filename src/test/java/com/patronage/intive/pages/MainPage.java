@@ -39,7 +39,7 @@ public class MainPage extends BasePage {
     WebElement linksTab;
 //    @FindBy(how = How.CSS, using = "#item-5")
 //    WebElement tabsTab;
-    @FindBy(how = How.XPATH, using = "//span[contains(text(),'Tabs')]")
+    @FindBy(how = How.XPATH, using = "//span[text()='Tabs']//parent::li[@id='item-5']")
     WebElement tabsTab;
     public void openDemoQA() {
         driver.get(GOOGLE_URL);
@@ -66,11 +66,11 @@ public class MainPage extends BasePage {
 //    }
 
     public void selectLinksMenuItem() {
-
+        ((JavascriptExecutor)driver).executeScript("scroll(0, 500);");
         linksTab.click();
     }
     public void selectTabsMenuItem() {
-
+        ((JavascriptExecutor)driver).executeScript("scroll(0, 500);");
         tabsTab.click();
     }
 }
