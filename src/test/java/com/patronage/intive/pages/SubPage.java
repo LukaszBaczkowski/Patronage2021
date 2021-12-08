@@ -1,5 +1,6 @@
 package com.patronage.intive.pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -17,8 +18,9 @@ public class SubPage extends BasePage{
 
     @FindBy(how = How.XPATH, using = "//div[@class='mb-3']")
     WebElement confirmOriginTabText;
-    public void selectLinkCreated() {
 
+    public void selectLinkCreated() {
+        ((JavascriptExecutor)driver).executeScript("scroll(0, -250);");
         LinkCreated.click();
     }
 
