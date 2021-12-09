@@ -57,14 +57,14 @@ public class StepDefs {
         mainPage.selectTabsMenuItem();
     }
 
-//    @And("user click \"Origin tab\"")
-//    public void selectOriginTab() {
-//        tabsSubPage.selectOriginTab();
-//    }
+    @And("user click \"Origin tab\"")
+    public void selectOriginTab() {
+        subPage.selectOriginTab();
+    }
 
-    @Then("{string} text should be visible")
+    @Then("{string} text should be contain")
     public void textShouldVisible(String textMessage) {
-        Assert.assertEquals(subPage.getOriginTabText(), textMessage);
-
+//        Assert.assertEquals(subPage.getOriginTabText(), textMessage);
+        Assert.assertTrue(subPage.getOriginTabText().contains(textMessage));
     }
 }

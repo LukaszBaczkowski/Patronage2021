@@ -20,8 +20,8 @@ Feature: DemoQA Tests
     Given DemoQA site is open
     When user select Widgets category
     And  select Tabs tab
-#    And  user click "Origin tab"
-    Then "Details about Lorem Ipsum" text should be visible
+    And  user click "Origin tab"
+    Then "Lorem Ipsum is not simply random text." text should be contain
 
 #  Scenario: Open DemoQA forms
 #    Given DemoQA site is open

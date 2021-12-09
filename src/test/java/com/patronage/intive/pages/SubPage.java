@@ -16,7 +16,7 @@ public class SubPage extends BasePage{
     @FindBy(how = How.ID, using = "demo-tab-origin")
     WebElement OriginTab;
 
-    @FindBy(how = How.XPATH, using = "//div[@class='mb-3']")
+    @FindBy(how = How.ID, using = "demo-tabpane-origin")
     WebElement confirmOriginTabText;
 
     public void selectLinkCreated() {
