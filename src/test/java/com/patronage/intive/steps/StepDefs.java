@@ -42,7 +42,7 @@ public class StepDefs {
     }
 
     @Then("{string} message should be visible")
-    public void messageShouldVisible(String textMessage) {
+    public void messageShouldBeVisible(String textMessage) {
         Assert.assertEquals(subPage.getCreatedLinkConfirmationMessage(), textMessage);
     }
     @When("user select Widgets category")
@@ -63,8 +63,25 @@ public class StepDefs {
     }
 
     @Then("{string} text should be contain")
-    public void textShouldVisible(String textMessage) {
-//        Assert.assertEquals(subPage.getOriginTabText(), textMessage);
+    public void textShouldBeVisible(String textMessage) {
         Assert.assertTrue(subPage.getOriginTabText().contains(textMessage));
     }
+    @When("user select Forms category")
+    public void userSelectsForms() {
+        mainPage.selectFormsSection();
+    }
+
+    @And("select Practice Form tab")
+    public void selectPracticeFormTab() {
+
+        mainPage.selectPracticeFormMenuItem();
+    }
+
+    @Then("Title {string} is visible")
+    public void titleShouldBeVisible(String textMessage) {
+        Assert.assertEquals(subPage.getPracticeFormTitle(), textMessage);
+    }
+
+
+
 }

@@ -1,14 +1,6 @@
 Feature: DemoQA Tests
 
 
-#  Scenario: Open DemoQA site and do something
-#    Given DemoQA site is open
-#    When user select Element category
-#    And select Radio Button tab
-#    And select radio button yes
-#    Then "You have selected Yes" message should be visible
-
-
   Scenario: Open DemoQA elements
     Given DemoQA site is open
     When user select Element category
@@ -23,8 +15,8 @@ Feature: DemoQA Tests
     And  user click "Origin tab"
     Then "Lorem Ipsum is not simply random text." text should be contain
 
-#  Scenario: Open DemoQA forms
-#    Given DemoQA site is open
-#    When user select Forms category
-#    And select Practice Form tab
-#    Then Title "Student Registration Form" is visible
+  Scenario: Open DemoQA forms
+    Given DemoQA site is open
+    When user select Forms category
+    And select Practice Form tab
+    Then Title "Mobile(10 Digits)" is visible

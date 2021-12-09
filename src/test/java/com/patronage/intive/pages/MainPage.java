@@ -11,15 +11,7 @@ import java.time.Duration;
 
 public class MainPage extends BasePage {
 
-    /* Beginner TIP: Every newly created Page MUST extend BasePage */
 
-    /* For purpose of the test exercise I assume that
-    https://demoqa.com/ and https://demoqa.com/{menu}
-    is one MainPage.
-
-    Every expanded menu element (so content on the right)
-    is one sub-page for example RadioButton menu content is sub-page.
-    **/
 
     private static final String GOOGLE_URL = "https://demoqa.com";
 
@@ -31,16 +23,19 @@ public class MainPage extends BasePage {
 
     @FindBy(how = How.XPATH, using = "//h5[contains(text(),'Widgets')]")
     WebElement widgetsSection;
+    @FindBy(how = How.XPATH, using = "//h5[contains(text(),'Forms')]")
+    WebElement formsSection;
 
 
-    @FindBy(how = How.CSS, using = "#item-2")
-    WebElement radioButtonTab;
     @FindBy(how = How.CSS, using = "#item-5")
     WebElement linksTab;
-//    @FindBy(how = How.CSS, using = "#item-5")
-//    WebElement tabsTab;
+
     @FindBy(how = How.XPATH, using = "//span[text()='Tabs']//parent::li[@id='item-5']")
     WebElement tabsTab;
+    @FindBy(how = How.XPATH, using = "//span[text()='Practice Form']//parent::li[@id='item-0']")
+    WebElement practiceformTab;
+
+
     public void openDemoQA() {
         driver.get(GOOGLE_URL);
     }
@@ -50,7 +45,7 @@ public class MainPage extends BasePage {
     }
 
     public void selectElementsSection() {
-        // Scroll down for stability, but there are much better ways to do it  :)
+
         ((JavascriptExecutor)driver).executeScript("scroll(0, 250);");
         elementsSection.click();
     }
@@ -59,11 +54,10 @@ public class MainPage extends BasePage {
         ((JavascriptExecutor)driver).executeScript("scroll(0, 250);");
         widgetsSection.click();
     }
-
-
-//    public void selectRadioButtonMenuItem() {
-//        radioButtonTab.click();
-//    }
+    public void selectFormsSection() {
+        ((JavascriptExecutor)driver).executeScript("scroll(0, 250);");
+        formsSection.click();
+    }
 
     public void selectLinksMenuItem() {
         ((JavascriptExecutor)driver).executeScript("scroll(0, 500);");
@@ -72,5 +66,9 @@ public class MainPage extends BasePage {
     public void selectTabsMenuItem() {
         ((JavascriptExecutor)driver).executeScript("scroll(0, 500);");
         tabsTab.click();
+    }
+    public void selectPracticeFormMenuItem() {
+        ((JavascriptExecutor)driver).executeScript("scroll(0, 500);");
+        practiceformTab.click();
     }
 }

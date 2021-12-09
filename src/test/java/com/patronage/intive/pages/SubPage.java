@@ -18,6 +18,10 @@ public class SubPage extends BasePage{
 
     @FindBy(how = How.ID, using = "demo-tabpane-origin")
     WebElement confirmOriginTabText;
+    @FindBy(how = How.ID, using = "userNumber-wrapper")
+    WebElement confirmPracticeFormTitle;
+
+
 
     public void selectLinkCreated() {
         ((JavascriptExecutor)driver).executeScript("scroll(0, -250);");
@@ -38,6 +42,9 @@ public class SubPage extends BasePage{
 
         return confirmOriginTabText.getText();
     }
+    public String getPracticeFormTitle() {
 
+        return confirmPracticeFormTitle.getText();
+    }
 
 }
