@@ -63,7 +63,7 @@ public class StepDefs {
     }
 
     @Then("{string} text should be contain")
-    public void textShouldBeVisible(String textMessage) {
+    public void textShouldBeContain(String textMessage) {
         Assert.assertTrue(subPage.getOriginTabText().contains(textMessage));
     }
     @When("user select Forms category")

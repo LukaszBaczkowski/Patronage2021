@@ -18,6 +18,7 @@ public class SubPage extends BasePage{
 
     @FindBy(how = How.ID, using = "demo-tabpane-origin")
     WebElement confirmOriginTabText;
+
     @FindBy(how = How.ID, using = "userNumber-wrapper")
     WebElement confirmPracticeFormTitle;
 
@@ -46,5 +47,7 @@ public class SubPage extends BasePage{
 
         return confirmPracticeFormTitle.getText();
     }
+
+
 
 }

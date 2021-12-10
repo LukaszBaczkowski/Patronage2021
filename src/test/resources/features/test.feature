@@ -20,3 +20,4 @@ Feature: DemoQA Tests
     When user select Forms category
     And select Practice Form tab
     Then Title "Mobile(10 Digits)" is visible
+
